@@ -1,0 +1,39 @@
+<!--pages/home/home.wxml-->
+<!--轮播图-->
+<swiper indicator-dots circular>
+   <swiper-item wx:for="{{swiperList}}" wx:key="id">
+    <image src="{{item.image}}"></image>
+   </swiper-item>
+</swiper>
+  <!--九宫格区域-->
+  <view class="grid-list">
+     <navigator class="grid-item" wx:for="{{gridList}}" wx:key="id" url="/pages/shopList/shopList?id={{item.id}}&title={{item.name}}">
+        <image src="{{item.icon}}"></image>
+        <text>{{item.name}}</text>
+     </navigator>
+  </view>
+  <!--图片区域-->
+  <view class="img-box">
+  <navigator url="/pages/content/content" open-type="switchTab">
+    <image src="/images/link-01.png" mode="center"></image>
+  </navigator>
+  <navigator url="/pages/message/message" open-type="switchTab">
+    <image src="/images/link-02.png" mode="center"></image>
+</navigator>
+</view>
+  <!-- <view class="img-box">
+  <navigator url="/pages/content/content" open-type="switchTab">
+    <image src="/images/link-01.png" mode="center"></image>
+  </navigator>
+  <navigator url="/pages/message/message" open-type="switchTab">
+    <image src="/images/link-02.png" mode="center"></image>
+</navigator>
+</view>
+<navigator url="/pages/info/info">导航到info页面</navigator>
+<button bindtap="gotoMessage">跳转到message</button>
+<button bindtap="gotoInfo">跳转到info</button>
+<navigator url="/pages/info/info?name=zs&age=20">跳转到info</navigator>
+
+<button bindtap="gotoInfoParam">跳转到info(参数）</button>
+<view class="box"></view> -->
+
